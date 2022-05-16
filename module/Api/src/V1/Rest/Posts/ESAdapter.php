@@ -50,10 +50,8 @@ class ESAdapter implements AdapterInterface
 
     /**
      * count.
-     *
-     * @return array
      */
-    public function count()
+    public function count(): int
     {
         return $this->result['hits']['total'];
     }

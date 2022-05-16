@@ -51,10 +51,10 @@ now you can access swagger API documentation via:
 - Posts [pagination included] [http://localhost:8080/posts](http://localhost:8080/posts)
 - Todos [pagination included] [http://localhost:8080/todos](http://localhost:8080/posts)
 - Posts with filter [http://localhost:8080/posts?filter_userId=33](http://localhost:8080/posts?filter_userId=33)
-    - Other filters ``` filter_title, filter_body```
+  - Other filters ``` filter_title, filter_body```
 - Todos with filter [http://localhost:8080/todos?filter_userId=33](http://localhost:8080/todos?filter_userId=33)
-    - Other filters ``` filter_title, filter_dueOn, filter_status```
-    
+  - Other filters ``` filter_title, filter_dueOn, filter_status```
+
 
 Automation Testings
 --------
@@ -68,4 +68,21 @@ $ docker-compose run api composer cs-check
 $ docker-compose run api composer cs-fix
 # Run PHPUnit tests:
 $ docker-compose run api composer test
+```
+
+Test Data
+--------
+
+If required any test data inside elasticsearch, you can run the following command:
+
+```bash
+$ docker-compose run api php script/posts.php
+$ docker-compose run api php script/todos.php
+```
+you can define how many test data you want to generate in script/posts.php and script/todos.php
+
+i.e:
+https://github.com/sridharkalaibala/task/blob/main/script/posts.php#L8
+```php
+for ($i=1; $i<=100; $i++)  # Line number 8
 ```
