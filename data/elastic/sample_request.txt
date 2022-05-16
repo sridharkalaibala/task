@@ -1,0 +1,15 @@
+POST /posts/post
+{
+    "userId": 1000,
+    "title": "Sample First Title",
+    "body": "Sample First Body",
+    "date": "2015-01-01T12:10:30Z"
+}
+
+POST /todos/todo
+{
+  "userId": 300,
+  "title": "Todo Sample Title 300",
+  "dueOn": "2022-05-16",
+  "status": "pending"
+}
